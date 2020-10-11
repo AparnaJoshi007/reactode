@@ -1,0 +1,31 @@
+.page-content-wrapper {
+  min-width: 0;
+  width: 100%;
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+}
+
+#sidebar-wrapper .list-group-item {
+  width: 200px;
+}
+
+#sidebar-wrapper .navbar-brand {
+  padding: 14px 20px;
+}
+
+.show {
+  display: block !important;
+}
+
+.modal {
+  max-width: 500px;
+  margin: 0 auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: auto !important;
+  height: auto !important;
+}

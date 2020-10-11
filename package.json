@@ -1,0 +1,23 @@
+{
+  "name": "reactode",
+  "version": "1.0.0",
+  "description": "A productivity app to store and retrieve files on demand",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AparnaJoshi007/reactode.git"
+  },
+  "keywords": [
+    "ReactJs",
+    "NodeJs"
+  ],
+  "author": "Aparna Joshi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AparnaJoshi007/reactode/issues"
+  },
+  "homepage": "https://github.com/AparnaJoshi007/reactode#readme"
+}
