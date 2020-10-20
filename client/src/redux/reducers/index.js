@@ -1,8 +1,12 @@
 import { combineReducers } from "redux";
-import { newItemReducer } from "./newItemReducer";
+import { bookReducer } from "./bookReducer";
+import { genreReducer } from "./genreReducer";
+import { statusReducer } from "./statusReducer";
 
 const rootReducer = combineReducers({
-  newItem: newItemReducer
+  books: bookReducer,
+  genres: genreReducer,
+  status: statusReducer
 });
 
 export default rootReducer;

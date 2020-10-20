@@ -1,11 +1,11 @@
 import React from 'react';
 
-const InputText = ({ id, value, changeHandler, placeHolder, title, errors }) => {
+const InputText = React.forwardRef(({ id, placeHolder, title, errors }, ref) => {
   return (
     <div className="form-group">
-      <label htmlFor={id} className={`col-sm-4 col-form-label ${errors ? 'text-danger': ''}`}>{title}</label>
+      {title && <label htmlFor={id} className={`col col-form-label ${errors ? 'text-danger': ''}`}>{title}</label>}
       <div className="col-sm-12">
-        <input type="text" className={`form-control ${errors ? 'is-invalid': ''}`} id={id} placeholder={placeHolder} value={value} onChange={(e) => changeHandler(e)}/>
+        <input type="text" ref={ref} className={`form-control ${errors ? 'is-invalid': ''}`} id={id} placeholder={placeHolder} />
       </div>
       <div className="col-sm-12">
         {errors === "required" &&
@@ -15,6 +15,6 @@ const InputText = ({ id, value, changeHandler, placeHolder, title, errors }) => 
       </div>
     </div>
   );
-}
+})
 
 export { InputText };

@@ -1,10 +1,14 @@
 {
   "name": "reactode",
   "version": "1.0.0",
-  "description": "A productivity app to store and retrieve files on demand",
+  "description": "An app to store book details",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart:api": "node server/createMockDb.js",
+    "start:api": "node server/apiServer.js",
+    "start": "cd client && yarn start",
+    "build": "cd client && yarn build"
   },
   "repository": {
     "type": "git",
@@ -19,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/AparnaJoshi007/reactode/issues"
   },
-  "homepage": "https://github.com/AparnaJoshi007/reactode#readme"
+  "homepage": "https://github.com/AparnaJoshi007/reactode#readme",
+  "dependencies": {
+    "json-server": "^0.16.2"
+  }
 }

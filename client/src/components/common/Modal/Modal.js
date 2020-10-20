@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 const Modal = ({ isOpen, toggle, children }) => {
   return isOpen ? ReactDOM.createPortal(
     <React.Fragment>
-      <div className="modal-backdrop fade show" onClick={() => {console.log("noo"); toggle()}}></div>
+      <div className="modal-backdrop fade show" onClick={() => toggle(!isOpen)}></div>
       <div className="modal fade show" id="form-modal" tabIndex="-1" role="dialog">
         <div className="modal-dialog" role="document">
           <div className="modal-content">

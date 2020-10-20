@@ -1,0 +1,1 @@
+export { InputGenre } from './InputGenre';

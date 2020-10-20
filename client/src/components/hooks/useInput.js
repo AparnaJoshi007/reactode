@@ -6,11 +6,11 @@ export const useInput = (initialState) => {
   return [
     values,
     errors,
-    (event) => {
+    (id, value) => {
       setValues({
         values: {
           ...values,
-          [event.target.id]: event.target.value
+          [id]: value
         },
         errors: {
           ...errors
