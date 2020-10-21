@@ -1,21 +1,25 @@
 import React from "react";
 
-const InputSelect = React.forwardRef(({
+const InputSelect = ({
+  id,
   name,
-  label,
+  title,
+  value,
   defaultOption,
   error,
+  handleChange,
   options
-}, ref) => {
-  console.log(options)
+}) => {
   return (
     <div className="form-group">
-      <label className="col col-form-label" htmlFor={name}>{label}</label>
+      <label className="col col-form-label" htmlFor={name}>{title}</label>
       <div className="field col-sm-12">
         <select
+          id={id}
           name={name}
           className="form-control"
-          ref={ref}
+          onChange={handleChange}
+          value={value || ''}
         >
           <option value="">{defaultOption}</option>
           {options.map(option => {
@@ -26,11 +30,12 @@ const InputSelect = React.forwardRef(({
             );
           })}
         </select>
-        {error && <div className="alert alert-danger">{error}</div>}
+        {error &&
+          <small id="passwordHelp" className="text-danger">{error}</small>}
       </div>
     </div>
   );
-});
+};
 
 // InputSelect.propTypes = {
 //   name: PropTypes.string.isRequired,

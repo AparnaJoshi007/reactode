@@ -31,7 +31,6 @@ const _Home = ({
   const handleDeleteBook = async (id) => {
     toast.success("Book deleted");
     try {
-      console.log(id)
       await props.deleteBook(id);
     } catch (error) {
      toast.error("Delete failed. " + error.message, { autoClose: false });

@@ -60,7 +60,9 @@ function createSlug(value) {
 
 function validateBook(book) {
   if (!book.title) return "Title is required.";
-  if (!book.genre) return "Genre is required.";
+  if (!book.genreId) return "Genre is required.";
   if (!book.author) return "Author is required.";
-  return "";
+  if (!book.language) return "Language is required.";
+  if (!book.url) return "URL is required.";
+  return "errorr";
 }

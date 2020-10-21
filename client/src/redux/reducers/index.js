@@ -9,4 +9,4 @@ const rootReducer = combineReducers({
   status: statusReducer
 });
 
-export default rootReducer;
+export  { rootReducer };

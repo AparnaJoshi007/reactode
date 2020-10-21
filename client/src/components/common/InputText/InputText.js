@@ -1,20 +1,19 @@
 import React from 'react';
 
-const InputText = React.forwardRef(({ id, placeHolder, title, errors }, ref) => {
+const InputText = ({ id, name, value, placeHolder, title, error, handleChange }) => {
+
   return (
     <div className="form-group">
-      {title && <label htmlFor={id} className={`col col-form-label ${errors ? 'text-danger': ''}`}>{title}</label>}
+      {title && <label htmlFor={name} className="col col-form-label">{title}</label>}
       <div className="col-sm-12">
-        <input type="text" ref={ref} className={`form-control ${errors ? 'is-invalid': ''}`} id={id} placeholder={placeHolder} />
+        <input type="text" className={`form-control ${error ? 'is-invalid': ''}`} id={id} name={name} value={value} onChange={handleChange} placeholder={placeHolder} />
       </div>
       <div className="col-sm-12">
-        {errors === "required" &&
-          <small id="passwordHelp" className="text-danger">Your input is required</small>}
-        {errors === "maxLength" &&
-          <small id="passwordHelp" className="text-danger">Your input exceed maxLength</small>}
+        {error &&
+          <small id="passwordHelp" className="text-danger">{error}</small>}
       </div>
     </div>
   );
-})
+};
 
 export { InputText };

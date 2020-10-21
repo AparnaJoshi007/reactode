@@ -33,14 +33,16 @@ const _Book = ({
       });
     } else {
       setBook({ ...props.book });
-    }
+    }    
+  }, [props.book]);
 
+  useEffect(() => {
     if (genres.length === 0) {
       loadGenres().catch(error => {
         alert("Loading authors failed" + error);
       });
     }
-  }, [props.book]);
+  }, [])
 
   const editBook = (book) => {
     history.push(`/edit/${book.slug}`)
@@ -83,8 +85,8 @@ const mapStateToProps = (state, ownProps) => {
       ? getBookBySlug(state.books, slug)
       : newBook;
 
-      return {
-    book: book || {},
+  return {
+    book: book,
     books: state.books || [],
     genres: state.genres || [],
     loading: state.status.loading || false
