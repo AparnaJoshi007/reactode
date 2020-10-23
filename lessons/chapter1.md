@@ -11,3 +11,9 @@ This is an advanced course in React. One should be familiar with how React works
 - Knowledge on basics of HTML and CSS.
 - Knowledge on modern javascript, latest Ecmascript features.
 - Basic knowledge on React library usage in a web application
+
+# Softwares and IDEs to install
+
+- We need `node.js` to build and serve our application. Please download and install [NodeJs](https://nodejs.org/en/download/) from the link.
+- Install a text editor. VsCode, Atom, Sublime or any other text editor should suffice.
+

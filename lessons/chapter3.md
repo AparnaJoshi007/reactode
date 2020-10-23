@@ -1,29 +1,30 @@
 # Class components v/s Functional components
 
-- Life cycle (for class)
+React takes component based approach for building an application. The component is a smallest isolated piece of code, that handle a particular functionality. Three things to understand about components:
 
-- React hooks (for functional)
+- A component can be a Class component or a Functional component.
+- A component can render other component as its child.
+- A component can pass data to its child. The flow of data is always unidirectional.
 
-## Need for Hooks
+Before React 16.8, the major difference between a Class and a Functional component was the availability of life cycle methods. Class components were considered to be `Stateful` components with the ability to maintain data, perform interactions on the data, and the Functional components did not have the ability to create state. They were `stateless` components that could only render the data passed to them. However, with the addtion of `hooks` in react, the whole application can be written using just functions. This would also keep the component clean, readable, and reduces the hassle of having to deal with `this` keyword. Along with this, react hooks also aim at reducing the compoenent hell problem. Functional components does have one small caveat. `componentDidError` and `getSnapshotBeforeUpdate` methods cannot be executed through a functional component. 
 
-## Caveats 
-Hooks cannot be used conditionally
+## Initial App Structure
 
-## Few popular hooks and their functions
-1. **useState** - Compliment for state in class components (main difference if you are using objects for hooks, destructure and update all the keys. Link: https://youtu.be/f687hBjwFcM?t=455)
-why usestate? Custom hook: https://youtu.be/f687hBjwFcM?t=814
-2. **useEffect** - The function is run every time render happens. Also execute it conditionally when a particular value changes. pass it as an argument in the array [] (called as dependancy array). Shallow comparision happens. Complimentary to componentDidMount and componentWillUnmount by passing empty array. Also add cleanup function by adding a return function(https://youtu.be/f687hBjwFcM?t=1413). Can have multiple useEffects and they are fired in the order they are registered.
-3. **useRef** - (https://youtu.be/f687hBjwFcM?t=2169) Similar to createRef from class components. `inputRef.current.focus()`. Can use as instant variables in classes and not be tied to react rerendering. Use references to solve the problem of updating state when the component is unmounted (https://youtu.be/f687hBjwFcM?t=2535). Set the reference value to false before unmounting and checkit before setting a state. Access the value with `.current`
-4. **useLayoutEffect** - Signature is identical to useeffect and is fired when DOM mutations occur. `getBoundingClientRect()`. 
-5. **useCallback** - To prevent function being created during every render. https://youtu.be/f687hBjwFcM?t=3595. Especially when using React.memo. Useful when iterating over an array, pass the function down and the logic can be put in the child component.
-6. **useMemo** - Optimize computed values. Avoid recomputation of functions by using useMemo. https://youtu.be/f687hBjwFcM?t=4461
-7. **useReducer** - Alternative to useState hook. Quite similar to how redux reducers work. Returns a value and dispatch function. Takes two params, a reducer function and initial value. Todo list example: https://youtu.be/f687hBjwFcM?t=5351. Can use `use-immer`to change state by mutating, but it handles it immutably.
-8. **useContext** - Share the data throughout the application. https://youtu.be/f687hBjwFcM?t=6229 user login example.
+The initial app contains 2 mail folders within `/client` folder. 
 
-// Why use functional components
+<img src="https://i.imgur.com/l7WkthU.png" />
 
-// Class v/s functional components 
+- `/public`: The `public` folder contains the static files and `index.html` page template.
+- `/src`: The `src` folder contains all the project related files. `index.js` will be the entry point.
 
-after React 16.8, functional components can do everything except ->
-componentDidError and getSnapshotBeforeUpdate -> can be done only be class
+```javascript
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+```
+
+The `ReactDOM.render()` will render html generated through the compoenents under the <div> with id `root`.
 
