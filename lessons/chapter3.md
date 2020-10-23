@@ -26,5 +26,15 @@ ReactDOM.render(
 );
 ```
 
-The `ReactDOM.render()` will render html generated through the compoenents under the <div> with id `root`.
+The `ReactDOM.render()` will render html generated through the compoenents under the `<div>` with id `root`.
 
+Please keep the `public` folder as it is. The `src` folder have the following changes. Note that these changes are not mandatory for the app to work, however, it provides a neat segregation of our code:
+
+1. `index.js` and `index.css` files will remain in the root of the directory.
+2. Create a new folder `components`. Move the files of `App.js` and `App.css` into `components` folder.
+3. Create a new folder `tests`. Move the file `App.test.js` under the folder.
+
+
+Now your project should contain: 
+- `components`: All the UI components will be written here.
+- `tests`: All the unit tests will be written here.
