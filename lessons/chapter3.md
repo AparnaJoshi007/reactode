@@ -31,8 +31,12 @@ The `ReactDOM.render()` will render html generated through the compoenents under
 Please keep the `public` folder as it is. The `src` folder have the following changes. Note that these changes are not mandatory for the app to work, however, it provides a neat segregation of our code:
 
 1. `index.js` and `index.css` files will remain in the root of the directory.
-2. Create a new folder `components`. Move the files of `App.js` and `App.css` into `components` folder.
-3. Create a new folder `tests`. Move the file `App.test.js` under the folder.
+2. Create a new folder `components` and create the folder `App/` under it. Move the files of `App.js` and `App.css` under the `App/` folder.
+3. Change the `index.js` file in the root folder to import `App` from the new location.
+```javascript
+import App from './components/App/App';
+```
+4. Create a new folder `tests`. Move the file `App.test.js` under the folder.
 
 
 Now your project should contain: 

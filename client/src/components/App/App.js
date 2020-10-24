@@ -7,7 +7,7 @@ import { BookForm } from '../Books/BookForm';
 import { PageNotFound } from '../PageNotFound';
 import './App.css';
 
-const _App = () => {
+const App = () => {
   return (
     <div className="page-content-wrapper">
       <Header />
@@ -24,4 +24,4 @@ const _App = () => {
   );
 }
 
-export const App = _App;
+export default App;
