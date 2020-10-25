@@ -29,3 +29,5 @@ You can either clone this repository and read through the tutorials to understan
 - Go to the `/client` directory and Run `yarn start`. This will bring up your application in the port 3000. The initial app should look like this:
 
 <img src="https://i.imgur.com/iraKP0b.png" width="300px />
+
+Understand intial app structure, Go to => [Chapter3](/lessons/chapter3.md)

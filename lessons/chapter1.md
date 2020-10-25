@@ -20,3 +20,4 @@ This is an advanced course in React. One should be familiar with how React works
 - We need `node.js` to build and serve our application. Please download and install [NodeJs](https://nodejs.org/en/download/) from the link.
 - Install a text editor. VsCode, Atom, Sublime or any other text editor should suffice.
 
+Configure basic setup, Go to => [Chapter2](/lessons/chapter2.md)

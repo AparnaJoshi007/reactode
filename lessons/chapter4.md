@@ -1,10 +1,10 @@
 ## Initial app structure
 
-- Use create-react-app 
+- Use `create-react-app`
 - Structure of app
 - Components -> Home, Add, etc
-- common -> header
 - Add router
+
 ## Add routes and Create pages
 
 The react application will have multiple routes to handle different parts of the application. The next step is to add routes to the application. `React-router` provides a set of components using which routing can be added to the application. 
@@ -175,3 +175,5 @@ Navigate to the `http://localhost:3000/add/` to view the `BookForm` page. The pa
 
 <img src="https://i.imgur.com/RZgHJhM.png" />
 
+
+Add navigational component and other relavant common components required by the application, Go to => [Chapter5](/lessons/chapter5.md)

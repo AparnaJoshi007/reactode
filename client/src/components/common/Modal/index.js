@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const Modal = ({ isOpen, toggle, children }) => {
+const Modal = ({ 
+  isOpen, 
+  toggle, 
+  children }) => {
   return isOpen ? ReactDOM.createPortal(
     <React.Fragment>
       <div className="modal-backdrop fade show" onClick={() => toggle(!isOpen)}></div>

@@ -31,7 +31,84 @@ The `ReactDOM.render()` will render html generated through the compoenents under
 Please keep the `public` folder as it is. The `src` folder have the following changes. Note that these changes are not mandatory for the app to work, however, it provides a neat segregation of our code:
 
 1. `index.js` and `index.css` files will remain in the root of the directory.
-2. Create a new folder `components` and create the folder `App/` under it. Move the files of `App.js` and `App.css` under the `App/` folder.
+2. Create a new folder `components` and create the folder `App/` under it. Move the files of `App.js` and `App.css` under the `App/` folder. Replace the following styles under `App.css`, this contains all the styles required by the project.
+
+```css
+.page-content-wrapper {
+  min-width: 0;
+  width: 100%;
+}
+
+.show {
+  display: block !important;
+}
+
+.modal {
+  max-width: 500px;
+  margin: 0 auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: auto !important;
+  height: auto !important;
+}
+
+.cooking-time-container {
+  display: flex;
+}
+
+.input-genre {
+  display: inline;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 4px;
+  margin-right: 2px;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.genre-close {
+  font-size: 20px;
+  margin-left: 4px;
+  top: 2px;
+  position: relative;
+  cursor: pointer;
+}
+
+.genre-creator {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.genre-holder {
+  overflow: scroll;
+}
+
+.form-group {
+  width: 100%;
+}
+
+.no-outline {
+  border: none !important;
+  overflow: auto;
+  outline: none !important;
+  box-shadow: none !important;
+  resize: none;
+}
+
+.book-name {
+  line-height: 38px;
+  flex: 1;
+  padding-left: 12px;
+}
+```
 3. Change the `index.js` file in the root folder to import `App` from the new location.
 ```javascript
 import App from './components/App/App';
@@ -42,3 +119,5 @@ import App from './components/App/App';
 Now your project should contain: 
 - `components`: All the UI components will be written here.
 - `tests`: All the unit tests will be written here.
+
+Add routes to the project, Go to => [Chapter4](/lessons/chapter4.md)

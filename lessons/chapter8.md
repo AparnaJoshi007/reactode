@@ -10,5 +10,5 @@
 
 - Adding redux-thunk
 
-- Show list of recipies available
+- Show list of books available
 
