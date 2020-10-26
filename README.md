@@ -1,5 +1,5 @@
 # reactode
-A productivity app to store and retrieve files on demand
+A productivity app to manage books
 
 # Link to lessons
 
