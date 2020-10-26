@@ -214,3 +214,6 @@ export  { rootReducer };
 Now the Homepage should automatically reload and display all the relevant data of books. Currently the link to open and display the details of a book and `delete` option are now working. These features will be added in the coming chapters. If everything is followed through correctly until this point, the Homepage should be loaded and should look as below.
 
 <img src="https://i.imgur.com/xEYrmzn.png" alt="homepage" />
+
+
+The data shown on Homepage is now fetched from the APIs. Add the create and update functionality to `BookForm` page Go to => [Chapter9](/lessons/chapter9.md)

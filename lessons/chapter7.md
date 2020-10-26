@@ -155,3 +155,5 @@ The `Home` page is now importing `import { connect } from 'react-redux';` and `i
 2. If `books` array is empty it dispatches an action `loadBooks`. 
 3. The `loadBooks` action then sends the hardcoded array `books` to the reducer and the data is then loaded.
 
+
+Now the home page is displaying hard coded book data. Add asynchronous API calls and fetch real time data. Go to => [Chapter8](/lessons/chapter8.md)

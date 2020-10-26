@@ -64,5 +64,5 @@ function validateBook(book) {
   if (!book.author) return "Author is required.";
   if (!book.language) return "Language is required.";
   if (!book.url) return "URL is required.";
-  return "";
+  return "sdg";
 }

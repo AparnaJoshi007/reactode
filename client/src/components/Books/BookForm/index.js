@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { loadBooks, saveBook } from '../../../redux/actions/bookActions';
 import { loadGenres } from '../../../redux/actions/genreActions';
@@ -32,7 +32,6 @@ const _BookForm = ({
   const [book, setBook] = useState({ ...props.book });
   const [errors, setErrors] = useState({});
   const [saving, setSaving] = useState(false);
-  const inputRef = useRef({});
   const { isOpen: showSummary, toggle: toggleSummary } = useModal();
 
   useEffect(() => {
@@ -48,21 +47,22 @@ const _BookForm = ({
   useEffect(() => {
     if (genres.length === 0) {
       loadGenres().catch(error => {
-        alert("Loading authors failed" + error);
+        alert("Loading genres failed" + error);
       });
     }
   }, []);
 
   const formIsValid = () => {
-    const errors = {};
-    Object.keys(inputRef.current).forEach((key) => {
-      if(inputRef.current[key].value === '') {
-        errors[key] = `${key} is required`
-      };
-    })
+    const formErrors = {};
+    const { title, author, genreId } = book;
 
-    setErrors(errors);
-    return Object.keys(errors).length === 0;
+    if (!title) formErrors.title = "Title is required.";
+    if (!author) formErrors.author = "Author is required";
+    if (!genreId) formErrors.genreId = "Genre is required";
+
+    setErrors({ ...formErrors});
+
+    return Object.keys(formErrors).length === 0;
   }
 
   const handleChange = (event) => {
@@ -171,7 +171,6 @@ const _BookForm = ({
     </div>
   );
 }
-
 
 export const getBookBySlug = (books, slug) => {
   return books.find(book => book.slug === slug) || null;

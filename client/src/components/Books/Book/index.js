@@ -39,7 +39,7 @@ const _Book = ({
   useEffect(() => {
     if (genres.length === 0) {
       loadGenres().catch(error => {
-        alert("Loading authors failed" + error);
+        alert("Loading genres failed" + error);
       });
     }
   }, [])
