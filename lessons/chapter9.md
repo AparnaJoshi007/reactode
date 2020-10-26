@@ -1,3 +1,2 @@
-## Async with redux - part 2
+## Async with redux - part 2 (Book Page)
 
-Provision for adding new recipe and editing existing recipe
