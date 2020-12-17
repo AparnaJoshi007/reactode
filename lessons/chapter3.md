@@ -10,7 +10,7 @@ Before React 16.8, the major difference between a Class and a Functional compone
 
 ## Initial App Structure
 
-The initial app contains 2 mail folders within `/client` folder. 
+The initial app contains 2 main folders within `/client` folder. 
 
 <img src="https://i.imgur.com/l7WkthU.png" />
 
